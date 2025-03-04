@@ -30,6 +30,7 @@ function CodeEditor() {
     if (editorRef) {
       const yDoc = yProvider.getYDoc();
       const yText = yDoc.getText("monaco");
+// NOTE: Critical section
 
       // Attach Yjs to Monaco
       binding = new MonacoBinding(
