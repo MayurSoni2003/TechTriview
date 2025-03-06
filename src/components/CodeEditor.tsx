@@ -69,9 +69,9 @@ function CodeEditor() {
           <div className="p-6">
             <div className="max-w-4xl mx-auto space-y-6">
               {/* HEADER */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex flex-col sm:flex-row sm:entitys-center justify-between gap-4">
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2">
+                  <div className="flex entitys-center gap-2">
                     <h2 className="text-2xl font-semibold tracking-tight">
                       {selectedQuestion.title}
                     </h2>
@@ -80,7 +80,7 @@ function CodeEditor() {
                     Choose your language and solve the problem
                   </p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex entitys-center gap-3">
                   <Select value={selectedQuestion.id} onValueChange={handleQuestionChange}>
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Select question" />
@@ -98,7 +98,7 @@ function CodeEditor() {
                     <SelectTrigger className="w-[150px]">
                       {/* SELECT VALUE */}
                       <SelectValue>
-                        <div className="flex items-center gap-2">
+                        <div className="flex entitys-center gap-2">
                           <img
                             src={`/${language}.png`}
                             alt={language}
@@ -112,7 +112,7 @@ function CodeEditor() {
                     <SelectContent>
                       {LANGUAGES.map((lang) => (
                         <SelectItem key={lang.id} value={lang.id}>
-                          <div className="flex items-center gap-2">
+                          <div className="flex entitys-center gap-2">
                             <img
                               src={`/${lang.id}.png`}
                               alt={lang.name}
@@ -129,7 +129,7 @@ function CodeEditor() {
 
               {/* PROBLEM DESC. */}
               <Card>
-                <CardHeader className="flex flex-row items-center gap-2">
+                <CardHeader className="flex flex-row entitys-center gap-2">
                   <BookIcon className="h-5 w-5 text-primary/80" />
                   <CardTitle>Problem Description</CardTitle>
                 </CardHeader>
@@ -142,7 +142,7 @@ function CodeEditor() {
 
               {/* PROBLEM EXAMPLES */}
               <Card>
-                <CardHeader className="flex flex-row items-center gap-2">
+                <CardHeader className="flex flex-row entitys-center gap-2">
                   <LightbulbIcon className="h-5 w-5 text-yellow-500" />
                   <CardTitle>Examples</CardTitle>
                 </CardHeader>
@@ -175,7 +175,7 @@ function CodeEditor() {
               {/* CONSTRAINTS */}
               {selectedQuestion.constraints && (
                 <Card>
-                  <CardHeader className="flex flex-row items-center gap-2">
+                  <CardHeader className="flex flex-row entitys-center gap-2">
                     <AlertCircleIcon className="h-5 w-5 text-blue-500" />
                     <CardTitle>Constraints</CardTitle>
                   </CardHeader>
@@ -200,10 +200,10 @@ function CodeEditor() {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
