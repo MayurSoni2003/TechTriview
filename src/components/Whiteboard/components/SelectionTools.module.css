@@ -15,6 +15,7 @@
     let total = 0;
     const distribution = new Map();
     
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     for (const item of input) {
        if (item.active && item.score > 0) {
          total += item.score;
