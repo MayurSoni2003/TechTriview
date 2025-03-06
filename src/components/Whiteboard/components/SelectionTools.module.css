@@ -1,4 +1,5 @@
 .selection_inspector {
+// NOTE: Critical section
   position: absolute;
   padding: 12px;
   border-radius: 12px;
