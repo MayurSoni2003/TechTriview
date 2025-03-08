@@ -5,6 +5,7 @@ const Whiteboard = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [color, setColor] = useState("black");
   const [brushSize, setBrushSize] = useState(5);
+  const [tool, setTool] = useState("brush");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -33,7 +34,7 @@ const Whiteboard = () => {
 
       context.lineWidth = brushSize;
       context.lineCap = "round";
-      context.strokeStyle = color;
+      context.strokeStyle = tool === "eraser" ? "white" : color;
 
       context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
       context.stroke();
@@ -50,11 +51,11 @@ const Whiteboard = () => {
       canvas.removeEventListener("mouseup", endDrawing);
       canvas.removeEventListener("mousemove", draw);
     };
-  }, [color, brushSize]);
+  }, [color, brushSize, tool]);
 
   return (
     <div>
-      <Toolbar setColor={setColor} setBrushSize={setBrushSize} />
+      <Toolbar setColor={setColor} setBrushSize={setBrushSize} setTool={setTool} />
       <canvas ref={canvasRef} width={800} height={600} className="border" />
     </div>
   );

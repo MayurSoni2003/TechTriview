@@ -3,11 +3,13 @@ import React from "react";
 interface ToolbarProps {
   setColor: (color: string) => void;
   setBrushSize: (size: number) => void;
+  setTool: (tool: string) => void;
 }
 
-const Toolbar: React.FC<ToolbarProps> = ({ setColor, setBrushSize }) => {
+const Toolbar: React.FC<ToolbarProps> = ({ setColor, setBrushSize, setTool }) => {
   return (
     <div className="toolbar">
+      <button onClick={() => setTool("brush")}>Brush</button>
       <label>
         Color:
         <input
@@ -25,6 +27,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ setColor, setBrushSize }) => {
           onChange={(e) => setBrushSize(Number(e.target.value))}
         />
       </label>
+      <button onClick={() => setTool("eraser")}>Erase</button>  
     </div>
   );
 };
