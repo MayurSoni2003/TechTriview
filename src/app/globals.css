@@ -77,3 +77,20 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.canvas {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

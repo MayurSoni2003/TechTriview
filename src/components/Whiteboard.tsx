@@ -1,14 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import Toolbar from "./Toolbar";
 
 const Whiteboard = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [color, setColor] = useState("black");
+  const [brushSize, setBrushSize] = useState(5);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return; // Add this null check
+    if (!canvas) return;
 
     const context = canvas.getContext("2d");
-    if (!context) return; // Add this null check
+    if (!context) return;
 
     context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -28,9 +31,9 @@ const Whiteboard = () => {
     const draw = (event: MouseEvent) => {
       if (!drawing) return;
 
-      context.lineWidth = 5;
+      context.lineWidth = brushSize;
       context.lineCap = "round";
-      context.strokeStyle = "black";
+      context.strokeStyle = color;
 
       context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
       context.stroke();
@@ -47,9 +50,14 @@ const Whiteboard = () => {
       canvas.removeEventListener("mouseup", endDrawing);
       canvas.removeEventListener("mousemove", draw);
     };
-  }, []);
+  }, [color, brushSize]);
 
-  return <canvas ref={canvasRef} width={800} height={600} className="border" />;
+  return (
+    <div>
+      <Toolbar setColor={setColor} setBrushSize={setBrushSize} />
+      <canvas ref={canvasRef} width={800} height={600} className="border" />
+    </div>
+  );
 };
 
 export default Whiteboard;
