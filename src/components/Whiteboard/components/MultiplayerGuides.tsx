@@ -128,4 +128,5 @@ export default React.memo(function MultiplayerGuides() {
       <Drafts />
     </>
   );
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
 });
