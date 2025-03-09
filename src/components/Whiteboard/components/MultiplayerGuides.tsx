@@ -7,6 +7,7 @@ import React from "react";
 import { colorToCss } from "../utils";
 import Cursor from "./Cursor";
 import Path from "./Path";
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
 
 function Cursors() {
   //
