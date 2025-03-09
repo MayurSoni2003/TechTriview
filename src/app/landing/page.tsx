@@ -26,6 +26,7 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/sign-up" className="inline-flex entitys-center justify-center rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
                 Get Started
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
               </Link>
               <Link href="/about" className="inline-flex entitys-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm hover:bg-accent hover:text-accent-foreground">
                 Learn More

@@ -163,6 +163,7 @@ function CodeEditor() {
                               )}
                             </pre>
                             <ScrollBar orientation="horizontal" />
+// TODO: Refactor
                           </ScrollArea>
                         </div>
                       ))}
