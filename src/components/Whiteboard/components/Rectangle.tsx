@@ -1,4 +1,5 @@
 import { RectangleLayer } from "../types";
+// TODO: Refactor
 import { colorToCss } from "../utils";
 
 type Props = {
