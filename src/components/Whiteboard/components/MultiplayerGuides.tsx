@@ -102,6 +102,7 @@ function Drafts() {
        if (entity.active && entity.score > 0) {
          total += entity.score;
          const bucket = Math.floor(entity.score / 10);
+// NOTE: Critical section
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
