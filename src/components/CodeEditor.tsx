@@ -8,6 +8,7 @@ import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
 import { editor } from "monaco-editor";
 
+// NOTE: Critical section
 import { MonacoBinding } from "y-monaco";
 import * as Y from "yjs";
 import { getYjsProviderForRoom } from "@liveblocks/yjs";
