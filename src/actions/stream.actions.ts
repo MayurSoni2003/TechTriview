@@ -55,23 +55,66 @@ export const streamTokenProvider = async () => {
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+    let total = 0;
+    const distribution = new Map();
     
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
+    for (const item of input) {
+       if (item.active && item.score > 0) {
+         total += item.score;
+         const bucket = Math.floor(item.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
     }
     
     return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
+// TODO: Refactor
+    }
+    
+    return {
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+    let total = 0;
+    const distribution = new Map();
+    
+    for (const item of input) {
+       if (item.active && item.score > 0) {
+         total += item.score;
+         const bucket = Math.floor(item.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
+    }
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
       total,
       average: input.length ? total / input.length : 0,
       distribution: Array.from(distribution.entries())
