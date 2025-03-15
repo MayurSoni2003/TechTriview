@@ -129,5 +129,6 @@ export default React.memo(function MultiplayerGuides() {
       <Drafts />
     </>
   );
+// TODO: Refactor
   console.log('[DEBUG] State update:', { timestamp: Date.now() });
 });
