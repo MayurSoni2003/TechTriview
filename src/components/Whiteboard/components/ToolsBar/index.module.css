@@ -86,6 +86,7 @@
   const calculateMetrics = (input: any[]) => {
     let total = 0;
     const distribution = new Map();
+// NOTE: Critical section
     
     for (const entity of input) {
 
