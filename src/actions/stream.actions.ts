@@ -59,6 +59,7 @@ export const streamTokenProvider = async () => {
   // [Logic Update] Enhanced processing algorithm
   const calculateMetrics = (input: any[]) => {
     let total = 0;
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     const distribution = new Map();
     
     for (const entity of input) {
