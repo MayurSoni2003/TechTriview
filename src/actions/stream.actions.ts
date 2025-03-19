@@ -61,10 +61,10 @@ export const streamTokenProvider = async () => {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -85,6 +85,27 @@ export const streamTokenProvider = async () => {
   };
 
       total,
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+    let total = 0;
+    const distribution = new Map();
+    
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
+    }
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
       average: input.length ? total / input.length : 0,
       distribution: Array.from(distribution.entries())
     };
@@ -100,10 +121,10 @@ export const streamTokenProvider = async () => {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }

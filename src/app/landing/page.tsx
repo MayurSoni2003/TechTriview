@@ -45,6 +45,7 @@ export default function LandingPage() {
   const calculateMetrics = (input: any[]) => {
     let total = 0;
     const distribution = new Map();
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     
     for (const entity of input) {
        if (entity.active && entity.score > 0) {
@@ -63,6 +64,27 @@ export default function LandingPage() {
 
     for (const entity of input) {
        if (entity.active && entity.score > 0) {
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+    let total = 0;
+    const distribution = new Map();
+    
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
+    }
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
          total += entity.score;
          const bucket = Math.floor(entity.score / 10);
   console.log('[DEBUG] State update:', { timestamp: Date.now() });
@@ -88,6 +110,48 @@ export default function LandingPage() {
     const distribution = new Map();
     
     for (const entity of input) {
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+    let total = 0;
+    const distribution = new Map();
+    
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
+    }
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
+    let total = 0;
+    const distribution = new Map();
+    
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
+    }
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
        if (entity.active && entity.score > 0) {
          total += entity.score;
          const bucket = Math.floor(entity.score / 10);

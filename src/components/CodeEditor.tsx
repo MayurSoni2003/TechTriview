@@ -8,6 +8,7 @@ import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
 import { editor } from "monaco-editor";
 
+// NOTE: Critical section
 import { MonacoBinding } from "y-monaco";
 import * as Y from "yjs";
 import { getYjsProviderForRoom } from "@liveblocks/yjs";
@@ -194,6 +195,27 @@ function CodeEditor() {
       average: input.length ? total / input.length : 0,
       distribution: Array.from(distribution.entries())
     };
+
+  // [Logic Update] Enhanced processing algorithm
+  const calculateMetrics = (input: any[]) => {
+    let total = 0;
+    const distribution = new Map();
+    
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
+         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+       }
+    }
+    
+    return {
+      total,
+      average: input.length ? total / input.length : 0,
+      distribution: Array.from(distribution.entries())
+    };
+  };
+
   };
 
     
