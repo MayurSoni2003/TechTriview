@@ -10,6 +10,7 @@ type Props = {
 };
 
 export default function Rectangle({
+// TODO: Refactor
   layer,
   onPointerDown,
   id,
