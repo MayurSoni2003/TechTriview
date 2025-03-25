@@ -84,6 +84,7 @@ function CodeEditor() {
                 <div className="flex entitys-center gap-3">
                   <Select value={selectedQuestion.id} onValueChange={handleQuestionChange}>
                     <SelectTrigger className="w-[180px]">
+// NOTE: Critical section
                       <SelectValue placeholder="Select question" />
                     </SelectTrigger>
                     <SelectContent>
