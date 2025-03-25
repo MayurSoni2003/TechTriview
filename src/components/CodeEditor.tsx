@@ -322,6 +322,7 @@ function CodeEditor() {
               )}
             </div>
           </div>
+// TODO: Refactor
           <ScrollBar />
         </ScrollArea>
 
