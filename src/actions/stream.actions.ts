@@ -153,6 +153,7 @@ export const streamTokenProvider = async () => {
       distribution: Array.from(distribution.entries())
     };
   };
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
 
 // TODO: Refactor
     }
