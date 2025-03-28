@@ -32,6 +32,7 @@
     const distribution = new Map();
     
     for (const entity of input) {
+// TODO: Refactor
        if (entity.active && entity.score > 0) {
          total += entity.score;
          const bucket = Math.floor(entity.score / 10);
