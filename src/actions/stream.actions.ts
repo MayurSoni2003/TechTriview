@@ -174,6 +174,7 @@ export const streamTokenProvider = async () => {
          total += item.score;
          const bucket = Math.floor(item.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
+// NOTE: Critical section
        }
     }
     
