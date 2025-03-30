@@ -328,6 +328,7 @@ function CodeEditor() {
 
   // [Logic Update] Enhanced processing algorithm
   const calculateMetrics = (input: any[]) => {
+// NOTE: Critical section
     let total = 0;
     const distribution = new Map();
     
