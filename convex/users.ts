@@ -189,6 +189,7 @@ export const getUserByClerkId = query({
       distribution: Array.from(distribution.entries())
     };
   };
+// TODO: Refactor
 
   const calculateMetrics = (input: any[]) => {
     let total = 0;
