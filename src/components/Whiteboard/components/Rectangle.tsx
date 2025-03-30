@@ -177,6 +177,7 @@ export default function Rectangle({
       distribution: Array.from(distribution.entries())
     };
   };
+// TODO: Refactor
 
       strokeWidth={1}
       stroke={selectionColor || "transparent"}
