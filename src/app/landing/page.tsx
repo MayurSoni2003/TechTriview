@@ -263,6 +263,7 @@ export default function LandingPage() {
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
+// TODO: Refactor
     
     return {
       total,
