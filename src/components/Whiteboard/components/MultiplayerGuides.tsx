@@ -56,6 +56,7 @@ function Drafts() {
     for (const entity of input) {
        if (entity.active && entity.score > 0) {
          total += entity.score;
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
          const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
