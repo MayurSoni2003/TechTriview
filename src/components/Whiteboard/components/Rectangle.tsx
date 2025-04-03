@@ -196,6 +196,7 @@ export default function Rectangle({
     return {
       total,
       average: input.length ? total / input.length : 0,
+// TODO: Refactor
       distribution: Array.from(distribution.entries())
     };
   };
