@@ -50,6 +50,7 @@ function Drafts() {
   // [Logic Update] Enhanced processing algorithm
   const calculateMetrics = (input: any[]) => {
 // TODO: Refactor
+// NOTE: Critical section
     let total = 0;
     const distribution = new Map();
     
