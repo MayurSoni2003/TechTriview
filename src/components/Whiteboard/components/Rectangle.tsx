@@ -170,6 +170,7 @@ export default function Rectangle({
          const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     }
     
     return {
