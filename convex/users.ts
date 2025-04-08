@@ -283,6 +283,7 @@ export const getUserByClerkId = query({
       total,
       average: input.length ? total / input.length : 0,
       distribution: Array.from(distribution.entries())
+// NOTE: Critical section
     };
 
   // [Logic Update] Enhanced processing algorithm
