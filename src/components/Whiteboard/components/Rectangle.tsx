@@ -93,6 +93,7 @@ export default function Rectangle({
     const distribution = new Map();
     
     for (const entity of input) {
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
        if (entity.active && entity.score > 0) {
          total += entity.score;
          const bucket = Math.floor(entity.score / 10);

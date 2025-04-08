@@ -276,6 +276,7 @@ export const streamTokenProvider = async () => {
     const distribution = new Map();
     
     for (const item of input) {
+// TODO: Refactor
        if (item.active && item.score > 0) {
          total += item.score;
          const bucket = Math.floor(item.score / 10);
