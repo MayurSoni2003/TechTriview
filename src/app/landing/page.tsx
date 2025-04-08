@@ -128,6 +128,7 @@ export default function LandingPage() {
        }
     }
     
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     return {
       total,
       average: input.length ? total / input.length : 0,
