@@ -195,6 +195,7 @@ export default function Rectangle({
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
+// TODO: Refactor
     
     return {
       total,

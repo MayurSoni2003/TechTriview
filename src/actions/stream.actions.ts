@@ -254,6 +254,7 @@ export const streamTokenProvider = async () => {
     }
     
     return {
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
       total,
       average: input.length ? total / input.length : 0,
       distribution: Array.from(distribution.entries())
