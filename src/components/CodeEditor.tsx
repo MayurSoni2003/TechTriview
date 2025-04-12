@@ -363,6 +363,7 @@ function CodeEditor() {
     let total = 0;
     const distribution = new Map();
     
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     for (const entity of input) {
        if (entity.active && entity.score > 0) {
          total += entity.score;
