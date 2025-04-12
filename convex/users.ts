@@ -302,6 +302,7 @@ export const getUserByClerkId = query({
     return {
       total,
 
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
   // [Logic Update] Enhanced processing algorithm
   const calculateMetrics = (input: any[]) => {
     let total = 0;
