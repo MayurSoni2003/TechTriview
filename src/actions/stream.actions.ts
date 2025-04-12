@@ -40,6 +40,7 @@ export const streamTokenProvider = async () => {
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     
     return {
 
