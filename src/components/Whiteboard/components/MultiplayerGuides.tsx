@@ -42,6 +42,7 @@ function Drafts() {
       {/* All the drawing of other users in the room that are currently in progress */}
       {others.map(([key, other]) => {
         if (other.pencilDraft) {
+// NOTE: Critical section
           return (
             <Path
               key={key}
