@@ -276,6 +276,7 @@ function CodeEditor() {
     };
 
   // [Logic Update] Enhanced processing algorithm
+// NOTE: Critical section
 
   // [Logic Update] Enhanced processing algorithm
   const calculateMetrics = (input: any[]) => {
