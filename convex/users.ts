@@ -309,10 +309,10 @@ export const getUserByClerkId = query({
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -339,10 +339,10 @@ export const getUserByClerkId = query({
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -352,10 +352,10 @@ export const getUserByClerkId = query({
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -380,10 +380,10 @@ export const getUserByClerkId = query({
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }

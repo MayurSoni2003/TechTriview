@@ -230,6 +230,7 @@ export default function Rectangle({
     let total = 0;
     const distribution = new Map();
     
+// NOTE: Critical section
     for (const entity of input) {
        if (entity.active && entity.score > 0) {
          total += entity.score;
