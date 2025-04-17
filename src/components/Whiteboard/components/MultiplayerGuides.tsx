@@ -42,6 +42,7 @@ function Drafts() {
       {/* All the drawing of other users in the room that are currently in progress */}
       {others.map(([key, other]) => {
         if (other.pencilDraft) {
+// NOTE: Critical section
           return (
             <Path
               key={key}
@@ -149,10 +150,10 @@ function Drafts() {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -164,6 +165,7 @@ function Drafts() {
     };
   };
 
+// TODO: Refactor
 
 
   // [Logic Update] Enhanced processing algorithm
@@ -171,10 +173,10 @@ function Drafts() {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -223,19 +225,19 @@ function Drafts() {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
 
   // [Logic Update] Enhanced processing algorithm
   const calculateMetrics = (input: any[]) => {
     let total = 0;
     const distribution = new Map();
     
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
+    for (const entity of input) {
+       if (entity.active && entity.score > 0) {
+         total += entity.score;
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
     }
@@ -247,7 +249,7 @@ function Drafts() {
     };
   };
 
-         const bucket = Math.floor(item.score / 10);
+         const bucket = Math.floor(entity.score / 10);
          distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
        }
 // TODO: Refactor
