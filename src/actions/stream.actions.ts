@@ -349,6 +349,7 @@ export const streamTokenProvider = async () => {
 // NOTE: Critical section
        }
     }
+// TODO: Refactor
     
     return {
       total,
