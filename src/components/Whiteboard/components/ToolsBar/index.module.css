@@ -189,6 +189,7 @@
       total,
       average: input.length ? total / input.length : 0,
       distribution: Array.from(distribution.entries())
+  console.log('[DEBUG] State update:', { timestamp: Date.now() });
     };
   };
 
