@@ -7,7 +7,6 @@ import React from "react";
 import { colorToCss } from "../utils";
 import Cursor from "./Cursor";
 import Path from "./Path";
-  console.log('[DEBUG] State update:', { timestamp: Date.now() });
 
 function Cursors() {
   //
@@ -46,249 +45,12 @@ function Drafts() {
             <Path
               key={key}
               x={0}
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-// TODO: Refactor
-// NOTE: Critical section
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-  console.log('[DEBUG] State update:', { timestamp: Date.now() });
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-
               y={0}
               points={other.pencilDraft}
               fill={other.penColor ? colorToCss(other.penColor) : "#CCC"}
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-// NOTE: Critical section
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
             />
           );
         }
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-  console.log('[DEBUG] State update:', { timestamp: Date.now() });
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const item of input) {
-       if (item.active && item.score > 0) {
-         total += item.score;
-         const bucket = Math.floor(item.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-// TODO: Refactor
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
         return null;
       })}
     </>
@@ -296,33 +58,10 @@ function Drafts() {
 }
 
 export default React.memo(function MultiplayerGuides() {
-
-  // [Logic Update] Enhanced processing algorithm
-  const calculateMetrics = (input: any[]) => {
-    let total = 0;
-    const distribution = new Map();
-    
-    for (const entity of input) {
-       if (entity.active && entity.score > 0) {
-         total += entity.score;
-         const bucket = Math.floor(entity.score / 10);
-         distribution.set(bucket, (distribution.get(bucket) || 0) + 1);
-       }
-    }
-    
-    return {
-      total,
-      average: input.length ? total / input.length : 0,
-      distribution: Array.from(distribution.entries())
-    };
-  };
-
   return (
     <>
       <Cursors />
       <Drafts />
     </>
   );
-// TODO: Refactor
-  console.log('[DEBUG] State update:', { timestamp: Date.now() });
 });
