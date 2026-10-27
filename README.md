@@ -1,5 +1,9 @@
 # TechTriview 🎯
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-tech--triview.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tech-triview.vercel.app)
+
+🌐 **Live Application:** [https://tech-triview.vercel.app](https://tech-triview.vercel.app)
+
 A modern, full-stack **remote technical interview platform** designed to streamline the hiring process with real-time video consultation, collaborative coding, interactive whiteboarding, and comprehensive feedback collection.
 
 ---
@@ -9,6 +13,22 @@ A modern, full-stack **remote technical interview platform** designed to streaml
 TechTriview is a comprehensive solution for conducting technical interviews remotely. It brings together candidates and interviewers in a unified workspace featuring live video, collaborative code editing, real-time whiteboarding, and structured feedback workflows.
 
 Whether you're assessing candidates for engineering positions, conducting pair programming sessions, or evaluating problem-solving skills, TechTriview provides all the tools needed in one seamless platform.
+
+---
+
+## 📸 Application Preview
+
+| **Dashboard & Quick Actions** | **Meeting Setup Screen** |
+|:---:|:---:|
+| <img src="./public/screenshots/1%20Dashboard.png" alt="Dashboard" width="100%"/> | <img src="./public/screenshots/2%20Start%20meeting%20screen.png" alt="Start Meeting Screen" width="100%"/> |
+
+| **Live Video & Collaborative Code Editor** | **Interactive Whiteboard** |
+|:---:|:---:|
+| <img src="./public/screenshots/3%20Live%20meeting%20screen.png" alt="Live Meeting & Code Editor" width="100%"/> | <img src="./public/screenshots/4%20Whiteboard%20screen.png" alt="Interactive Whiteboard" width="100%"/> |
+
+| **Scheduled Interviews & Management** | **Candidate / Interviewee View** |
+|:---:|:---:|
+| <img src="./public/screenshots/5%20past%20scheduled%20interviews.png" alt="Scheduled Interviews" width="100%"/> | <img src="./public/screenshots/6%20interviewee%20screen%20(interview%20scheduled).png" alt="Candidate View" width="100%"/> |
 
 ---
 
@@ -132,6 +152,7 @@ TechTriview/
 │   └── liveblocks.config.ts        # Liveblocks configuration
 │
 ├── public/                          # Static assets
+│   └── screenshots/                 # Application screenshots
 ├── .env.example                     # Environment variable template
 ├── package.json
 ├── tsconfig.json
@@ -177,7 +198,7 @@ Ensure you have the following installed and configured:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/MayurSoni2003/TechTriview
 cd TechTriview
 ```
 
@@ -195,7 +216,6 @@ Edit `TechTriview/.env.local` with your credentials:
 # Clerk Authentication
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
-CLERK_WEBHOOK_SECRET=your_clerk_webhook_secret
 
 # Convex (Backend)
 CONVEX_DEPLOYMENT=your_convex_deployment
